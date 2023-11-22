@@ -4,49 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HTML Technical Documentation</title>
+    <title>Responsive Web Design Documentation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <nav id="navbar">
-        <header>HTML Documentation</header>
+        <header>Responsive Web Design Documentation</header>
         <a class="nav-link" href="#introduction">Introduction</a>
-        <a class="nav-link" href="#html_elements">HTML Elements</a>
-        <a class="nav-link" href="#attributes">Attributes</a>
-        <a class="nav-link" href="#forms">Forms</a>
-        <a class="nav-link" href="#advanced_topics">Advanced Topics</a>
+        <a class="nav-link" href="#media_queries">Media Queries</a>
+        <a class="nav-link" href="#flexbox">Flexbox</a>
+        <a class="nav-link" href="#grid_system">Grid System</a>
+        <a class="nav-link" href="#responsive_images">Responsive Images</a>
+        <a class="nav-link" href="#css_animations">CSS Animations</a>
     </nav>
 
     <main id="main-doc">
         <section id="introduction" class="main-section">
             <header>Introduction</header>
-            <p>HTML, which stands for HyperText Markup Language, is the standard markup language for creating web pages. It provides the structure for content on the World Wide Web.</p>
-            <p>This section will give you an overview of the history and purpose of HTML in web development.</p>
+            <p>Responsive Web Design (RWD) is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.</p>
+            <p>This documentation explores key concepts and techniques for creating responsive and user-friendly web designs.</p>
         </section>
 
-        <section id="html_elements" class="main-section">
-            <header>HTML Elements</header>
-            <p>HTML documents are made up of HTML elements, which define the structure of a web page. Elements are composed of tags, attributes, and content.</p>
-            <p>Some common HTML elements include headings, paragraphs, lists, images, and links. Understanding these basic elements is crucial for building any web page.</p>
+        <section id="media_queries" class="main-section">
+            <header>Media Queries</header>
+            <p>Media queries are a crucial part of responsive design. Learn how to use media queries to apply styles based on the characteristics of the device, such as its width, height, and resolution.</p>
+            <p>Example:</p>
+            <code>
+                @media only screen and (max-width: 600px) {"{"}<br>
+                &nbsp;&nbsp; /* Styles for devices with a width of 600px or less */<br>
+                {"}"}
+            </code>
+            <p>List of Media Queries:</p>
+            <ul>
+                <li>Small screens: max-width: 600px</li>
+                <li>Medium screens: 601px to 900px</li>
+                <li>Large screens: 901px to 1200px</li>
+                <li>Extra-large screens: 1201px to 1800px</li>
+                <li>Huge screens: 1801px and above</li>
+            </ul>
         </section>
 
-        <section id="attributes" class="main-section">
-            <header>Attributes</header>
-            <p>Attributes provide additional information about HTML elements. They are always included in the opening tag and are used to modify the behavior or appearance of an element.</p>
-            <p>For example, the <code>&lt;a&gt;</code> element is used to create hyperlinks, and it can have attributes such as <code>href</code> to specify the link's destination.</p>
+        <section id="flexbox" class="main-section">
+            <header>Flexbox</header>
+            <p>Flexbox is a one-dimensional layout method for laying out items in rows or columns. Explore how to use flexbox to create flexible and efficient layouts.</p>
+            <p>Example:</p>
+            <code>
+                .container {"{"}<br>
+                &nbsp;&nbsp; display: flex;<br>
+                &nbsp;&nbsp; justify-content: space-between;<br>
+                &nbsp;&nbsp; /* Other flex properties */<br>
+                {"}"}
+            </code>
         </section>
 
-        <section id="forms" class="main-section">
-            <header>Forms</header>
-            <p>HTML forms are used to collect user input. They consist of various form elements like text fields, radio buttons, checkboxes, and buttons.</p>
-            <p>Understanding how to create and handle forms is essential for building interactive and user-friendly web applications.</p>
+        <section id="grid_system" class="main-section">
+            <header>Grid System</header>
+            <p>The CSS Grid Layout is a two-dimensional layout system for the web. Learn how to create complex and responsive layouts using the grid system.</p>
+            <p>Example:</p>
+            <code>
+                .container {"{"}<br>
+                &nbsp;&nbsp; display: grid;<br>
+                &nbsp;&nbsp; grid-template-columns: repeat(3, 1fr);<br>
+                &nbsp;&nbsp; /* Other grid properties */<br>
+                {"}"}
+            </code>
         </section>
 
-        <section id="advanced_topics" class="main-section">
-            <header>Advanced Topics</header>
-            <p>As you become more proficient with HTML, you can explore advanced topics such as multimedia integration, semantic HTML, and responsive design.</p>
-            <p>Using multimedia elements like <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>, employing semantic HTML tags, and creating responsive designs for various devices are crucial skills for modern web development.</p>
+        <section id="responsive_images" class="main-section">
+            <header>Responsive Images</header>
+            <p>Optimize your images for different screen sizes and resolutions. Explore techniques such as using the "max-width" property and the "srcset" attribute for responsive images.</p>
+            <p>Example:</p>
+            <code>
+                img {"{"}<br>
+                &nbsp;&nbsp; max-width: 100%;<br>
+                &nbsp;&nbsp; height: auto;<br>
+                {"}"}
+            </code>
+        </section>
+
+        <section id="css_animations" class="main-section">
+            <header>CSS Animations</header>
+            <p>Add life to your website with CSS animations. Learn how to create smooth and engaging animations to enhance the user experience.</p>
+            <p>Example:</p>
+            <code>
+                .animate-fade-in {"{"}<br>
+                &nbsp;&nbsp; animation: fadeIn 2s;<br>
+                {"}"}<br><br>
+
+                @keyframes fadeIn {"{"}<br>
+                &nbsp;&nbsp; from {"{"} opacity: 0; {"}"}<br>
+                &nbsp;&nbsp; to {"{"} opacity: 1; {"}"}<br>
+                {"}"}
+            </code>
         </section>
     </main>
 </body>
